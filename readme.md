@@ -2,7 +2,7 @@
 
 ![Document Summarization](images.png)
 
-A simple, intelligent web app that uses **Gemini 2.0 Flash LLM** and **LangGraph orchestration** to summarize documents. Users can upload `.txt` files or enter text directly, and choose the summarization style.
+A simple, intelligent web app that uses **Qwen-QWQ-32B via Grok API** and **LangGraph orchestration** to summarize documents. Users can upload `.txt` files or enter text directly, and choose the summarization style.
 
 ---
 
@@ -20,7 +20,7 @@ A simple, intelligent web app that uses **Gemini 2.0 Flash LLM** and **LangGraph
   - **Bullet Points**: Key takeaways in bullet format
 
 - **🤖 AI-Powered Engine**  
-  Powered by **Gemini 2.0 Flash** for high-quality summaries.
+  Powered by **Qwen-QWQ-32B (via Grok API)** for high-quality summaries.
 
 - **🧩 LangGraph Orchestration**  
   Efficient workflow control with LangGraph.
