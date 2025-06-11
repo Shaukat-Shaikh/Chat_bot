@@ -2,3 +2,4 @@ streamlit
 requests
 langchain-core
 langgraph
+python-dotenv

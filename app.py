@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import json
 import os
+from dotenv import load_dotenv
 from typing import TypedDict, Annotated
 from langchain_core.messages import AnyMessage, HumanMessage, AIMessage
 from langgraph.graph import StateGraph, START, END
@@ -36,9 +37,11 @@ def summarizer_llm_node(state: SummarizationState):
         "model": "llama3-8b-8192",
         "temperature": 0.7
     }
-
+    load_dotenv()  # This loads variables from .env into environment
+    groq_api_key = os.getenv("GROQ_API_KEY")
     # Load API key (recommend using environment variable)
-    groq_api_key = os.getenv("GROQ_API_KEY", "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")
+    # groq_api_key = os.getenv("GROQ_API_KEY", "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")
+
 
     headers = {
         'Content-Type': 'application/json',
