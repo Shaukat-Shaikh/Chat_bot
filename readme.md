@@ -1,9 +1,51 @@
-📄 Document Summarization ServiceThis is a simple web application that allows users to summarize documents using the Gemini 2.0 Flash Large Language Model (LLM) via a LangGraph orchestration. Users can input text directly or upload a .txt file and choose from different summarization styles.✨ FeaturesText Input: Paste text directly into a text area for summarization.File Upload: Upload a plain text (.txt) file for summarization.Multiple Summarization Styles:Brief: Get a short, concise overview.Detailed: Receive a more comprehensive summary.Bullet Points: Obtain the summary as a list of key points.AI-Powered Summarization: Leverages the Gemini 2.0 Flash LLM for intelligent text summarization.LangGraph Orchestration: Utilizes LangGraph for defining and managing the LLM workflow.User-Friendly Interface: Built with Streamlit for an intuitive and responsive web interface.Basic Input Validation: Ensures that text input is not empty before processing.Graceful Error Handling: Provides informative messages for API call failures or invalid file uploads.🚀 Getting StartedFollow these instructions to get a copy of the project up and running on your local machine.PrerequisitesPython 3.7+ installed on your system.pip (Python package installer) is required.InstallationClone the repository (or download the files):If this project is part of a repository, clone it:git clone <repository_url>
-cd <repository_name>
-Otherwise, ensure app.py and requirements.txt are in the same directory.Create a virtual environment (recommended):python -m venv venv
-Activate the virtual environment:Windows:.\venv\Scripts\activate
-macOS/Linux:source venv/bin/activate
-Install dependencies:The project uses a requirements.txt file to manage dependencies.pip install -r requirements.txt
-If you don't have requirements.txt, you can install them manually:pip install streamlit requests langchain-core langgraph
-Running the ApplicationEnsure your virtual environment is active.Run the Streamlit application:streamlit run app.py
-The application will automatically open in your default web browser at http://localhost:8501. If it doesn't, navigate to this URL manually.💡 How to UseInput Document:Paste Text: Type or paste the document content into the large text area under "1. Input Document".Upload File: Click "Or upload a plain text (.txt) file" to select and upload a .txt file from your computer. The content of the uploaded file will populate the text area.Choose Summarization Style:Select your desired summarization style from the radio buttons under "2. Choose Summarization Style":brief: For a short and concise summary.detailed: For a more extensive and informative summary.bullet_points: For a summary presented as key bullet points.Summarize:Click the "Summarize Document" button.A loading spinner will appear while the AI processes your request.View Summarized Output:The generated summary will be displayed under "3. Summarized Output".🚧 Error HandlingThe application includes basic error handling for:Empty Input: An error message will be displayed if you try to summarize without providing any text.File Reading Issues: If there's a problem reading the uploaded .txt file (e.g., corrupted file, incorrect format), an error will be shown.API Errors: Network issues, invalid API responses, or other problems during the communication with the Gemini LLM API will be caught and displayed as an error message.💻 Technologies UsedPython: The core programming language.Streamlit: For building the interactive web user interface.LangGraph: For building stateful, multi-actor applications with LLMs, orchestrating the summarization flow.requests: For making HTTP requests to the Gemini LLM API.Gemini 2.0 Flash API: The underlying Large Language Model used for summarization.Feel free to explore, modify, and enhance this document summarization service!
+# 🧠 Document Summarization Service
+
+![Document Summarization](images.png)
+
+A simple, intelligent web app that uses **Gemini 2.0 Flash LLM** and **LangGraph orchestration** to summarize documents. Users can upload `.txt` files or enter text directly, and choose the summarization style.
+
+---
+
+## 🌟 Features
+
+- **📝 Text Input**  
+  Paste text into a text area for instant summarization.
+
+- **📁 File Upload**  
+  Upload plain `.txt` files for document input.
+
+- **🎯 Summarization Styles**
+  - **Brief**: Short, concise summary  
+  - **Detailed**: Rich, comprehensive summary  
+  - **Bullet Points**: Key takeaways in bullet format
+
+- **🤖 AI-Powered Engine**  
+  Powered by **Gemini 2.0 Flash** for high-quality summaries.
+
+- **🧩 LangGraph Orchestration**  
+  Efficient workflow control with LangGraph.
+
+- **💻 Streamlit Interface**  
+  Clean, user-friendly, and responsive UI.
+
+- **🛡️ Basic Input Validation**  
+  Ensures no empty input is sent to the LLM.
+
+- **🚨 Graceful Error Handling**  
+  Detects and reports API issues, invalid files, and missing input.
+
+---
+
+## 🚀 Getting Started
+
+### ✅ Prerequisites
+
+- Python 3.7+
+- `pip` (Python package manager)
+
+### 🛠 Installation Steps
+
+1. **Clone the repository**:
+   ```bash
+   git clone <repository_url>
+   cd <repository_name>
