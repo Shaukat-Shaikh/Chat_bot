@@ -47,7 +47,6 @@ def summarizer_llm_node(state: SummarizationState):
         'Content-Type': 'application/json',
         'Authorization': f'Bearer {groq_api_key}'
     }
-
     api_url = "https://api.groq.com/openai/v1/chat/completions"
 
     try:
@@ -101,7 +100,6 @@ summarization_style_option = st.radio(
     ('brief', 'detailed', 'bullet_points'),
     horizontal=True
 )
-
 # Summarize button
 st.markdown("---")
 if st.button("Summarize Document", use_container_width=True, type="primary"):
@@ -140,4 +138,3 @@ st.sidebar.code("streamlit run app.py")
 st.sidebar.markdown("---")
 st.sidebar.markdown("🛡️ Tip: Set your API key securely via:")
 st.sidebar.code("export GROQ_API_KEY='your_api_key_here'")
-
