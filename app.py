@@ -39,9 +39,6 @@ def summarizer_llm_node(state: SummarizationState):
     }
     load_dotenv()  # This loads variables from .env into environment
     groq_api_key = os.getenv("GROQ_API_KEY")
-    # Load API key (recommend using environment variable)
-    # groq_api_key = os.getenv("GROQ_API_KEY", "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")
-
 
     headers = {
         'Content-Type': 'application/json',
